@@ -1,0 +1,33 @@
+{% load static %} {% block body %} {% include 'provider_navigation.html' %}
+
+<marquee style="font-family:'Times New Roman'; font-size : 25px; color:darkcyan; background-color: black; font-weight: bold; margin-top: 1%;">
+    View All Job Details
+</marquee>
+<hr>
+<div class="container">
+    <table class=" table table-hover " id="example">
+        <thead>
+            <tr style="background-color: aquamarine;">
+                <th>Sr.No</th>
+                <th>Job Title</th>
+                <th>Creation Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in job %}
+            <tr style="background-color: #e0a09f">
+                <td>{{ forloop.counter }}</td>
+                <td>{{ i.title }}</td>
+                <td>{{ i.creationdate }}</td>
+
+                <td>
+                    <a href="{% url 'edit_jobdetail' i.id %}" class="btn btn-success btn-sm">Edit</a> |
+                    <a href="{% url 'change_status' i.id %}" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

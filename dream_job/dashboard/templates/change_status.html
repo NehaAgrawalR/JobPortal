@@ -1,0 +1,30 @@
+{% load static %} {% block body %} {% include 'admin_navigation.html' %}
+
+<marquee style="font-family:'Times New Roman'; font-size : 25px; color:darkcyan; background-color: black; font-weight: bold; margin-top: 1%;">
+    Pending Job Provider
+</marquee>
+<hr>
+<form class="container mt-5" method="post">
+    {% csrf_token %}
+    <label><b>Job Provider Name</b></label>
+    <input type="text" class="form-control" name="uname" value="{{ provider.user.first_name}} {{ provider.user.last_name}}">
+
+    <label><b>Status</b></label>
+    <select class="form-control" name="status">
+        <option value="Accept">Accept</option>
+        <option value="Reject">Reject</option>
+    </select>
+
+    <input type="submit" class="btn btn-primary" style="margin-top:2%; color:darkcyan; background-color:black; height:40px">
+</form>
+
+{% if error == "no" %}
+<script>
+    alert("Status Change successfully");
+    window.location = ("{% url 'provider_all' %}")
+</script>
+{% endif %} {% if error == "yes" %}
+<script>
+    alert("Try again....");
+</script>
+{% endif %} {% endblock %}

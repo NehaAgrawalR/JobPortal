@@ -1,0 +1,86 @@
+{% load static %} {% block body %} {% include 'navigation.html' %}
+
+<style>
+    .container {
+        max-width: 90%;
+    }
+    
+    .content {
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        height: 30px;
+        width: 91%
+    }
+</style>
+<div class="container-fluid" style="margin-top:1%">
+    <img src="{% static 'images/1.jpg' %}" style="height:450px;width:100%">
+</div>
+<div class="container" style="background-color: black; height: 570px; margin-top:2%">
+    <h1 class="text-center text-white">---------| OUR PLACED EMPLOYEE |----------</h1>
+    <div class="row mt-3">
+        <div class="col-md-3">
+            <img src="{% static 'images/Bildschirmfoto4.png' %}" style="width:100% ; margin-top: 5%; height:200px; border-radius:50%">
+            <div class="content">
+                <p>Facebook</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/Bildschirmfoto5.png' %}" style="width:100% ; margin-top: 5%; height:200px; border-radius:50%">
+            <div class="content">
+                <p>Amazon</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/Bildschirmfoto6.png' %}" style="width:100% ; margin-top: 5%; height:200px; border-radius:50%">
+            <div class="content">
+                <p>Infosys</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/Image 43.png' %}" style="width:100% ; margin-top: 5%; height:200px; border-radius:50%">
+            <div class="content">
+                <p>HCL</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-3">
+            <img src="{% static 'images/Image 44.png' %}" style="width:100% ; margin-top: 5%; height:200px; border-radius:50%">
+            <div class="content">
+                <p>Facebook</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/Image 180.png' %}" style="width:100% ; margin-top: 5%; height:200px; border-radius:50%">
+            <div class="content">
+                <p>Amazon</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/Image 181.png' %}" style="width:100% ; margin-top: 5%; height:200px; border-radius:50%">
+            <div class="content">
+                <p>Facebook</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <img src="{% static 'images/1.jpg' %}" style="width:100% ; margin-top: 5%; height:200px; border-radius:50%">
+            <div class="content">
+                <p>Facebook</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% include 'footer.html' %} {% endblock%}
